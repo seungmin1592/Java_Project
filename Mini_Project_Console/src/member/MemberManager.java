@@ -95,6 +95,35 @@ public class MemberManager {
 		}
 
 	}
+	
+	// 회원아이디/비번찾기 
+		public void MemberFind() {
+
+			try {
+
+				mList = dao.getMemberList(conn);
+				String name = getStrInput("회원 이름 : ");
+				String email = getStrInput("회원 이메일 : ");
+
+				int cnt = 0;
+				for (int i = 0; i < mList.size(); i++) {
+					if(name.equals(mList.get(i).getName()) && email.equals(mList.get(i).getEmail())) {
+						cnt++;
+						System.out.println("------------------------------------------------------------");
+						System.out.println("☞ [" + name + "]님의 ID : " + mList.get(i).getId());
+						System.out.println("☞ [" + name + "]님의 PW : " + mList.get(i).getPassword());
+						System.out.println("------------------------------------------------------------");
+						break;
+					} 
+				} if(cnt == 0) {
+					System.out.println("회원정보가 틀렸습니다.");
+				}
+
+			} catch (Exception e) {
+				System.out.println("※ 잘못입력하셨습니다. ");
+			}
+		}
+	
 
 	// 가입할때 아이디 중복 체크
 	private boolean idCheck(String id) {

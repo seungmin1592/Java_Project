@@ -28,7 +28,8 @@ public class AdminMemberManager {
 			System.out.println("----------------------------------------------------------------------");
 
 			for (Member Member : list) {
-				System.out.printf("%d\t %s\t  %s \t %s\t %s\t  %s\t \n", Member.getIdx(), Member.getId(), Member.getPassword(), Member.getName(), Member.getPhonenum(), Member.getEmail());
+				System.out.printf("%d\t %s\t  %s \t %s\t %s\t  %s\t \n", 
+						Member.getIdx(), Member.getId(), Member.getPassword(), Member.getName(), Member.getPhonenum(), Member.getEmail());
 			}
 
 			System.out.println("----------------------------------------------------------------------");
