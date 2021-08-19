@@ -12,6 +12,7 @@
     border-left:2px solid #ddd;
     font-weight:600;
     cursor:pointer;
+    color:#929192
 }
 .place_list_section .place_menu > li:first-child {
     border:0;
@@ -19,7 +20,7 @@
 
 .place_list_section .place_menu > li.on {
     font-weight:600;
-    color:#a02323   
+    color:#333   
 }
 
 .place_search_bar {
